@@ -1,0 +1,38 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Dice Randomizer"
+config/version="000.2512.0.snapshot"
+run/main_scene="uid://b6se7v3gn6frq"
+config/features=PackedStringArray("4.4", "Mobile")
+
+[display]
+
+window/size/viewport_width=648
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "pink",
+"res://levels/": "purple",
+"res://nodes/": "blue",
+"res://packs/": "teal",
+"res://packs/default/dices/": "blue",
+"res://packs/default/levels/": "purple",
+"res://visuals/": "orange"
+}
+
+[rendering]
+
+renderer/rendering_method="mobile"

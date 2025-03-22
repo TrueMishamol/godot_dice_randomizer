@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dvo0c6r5f0if6"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+current = true

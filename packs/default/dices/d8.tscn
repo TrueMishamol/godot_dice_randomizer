@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cugwo26pigjrg"]
+
+[ext_resource type="PackedScene" uid="uid://bay5jpitc0eel" path="res://nodes/base_dice.tscn" id="1_j6b4c"]
+[ext_resource type="PackedScene" uid="uid://br4l5c3np2iqs" path="res://assets/models/dices/default/d8.glb" id="2_q0rqc"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_q0rqc"]
+points = PackedVector3Array(-0.75, 0.948151, -0.75, -0.000146747, 0, -0.000146806, -0.75, 0.948151, 0.75, -0.000146747, 1.89667, -0.000146806, 0.75, 0.948151, -0.75, 0.749853, 0.948151, 0.75)
+
+[node name="BaseDice" instance=ExtResource("1_j6b4c")]
+
+[node name="d82" parent="." index="0" instance=ExtResource("2_q0rqc")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_q0rqc")

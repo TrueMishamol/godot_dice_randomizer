@@ -1,0 +1,110 @@
+[gd_scene load_steps=2 format=3 uid="uid://wy1jbmevyx3c"]
+
+[ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/dice_randomizer_ui_theme/dice_randomizer_ui_theme.tres" id="1_g22vf"]
+
+[node name="SpawnMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_g22vf")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -200.0
+offset_bottom = 200.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 1
+
+[node name="D4" type="HBoxContainer" parent="MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/VBoxContainer/D4"]
+layout_mode = 2
+text = "D4"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="D6" type="HBoxContainer" parent="MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/VBoxContainer/D6"]
+layout_mode = 2
+text = "D6"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D6"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="D8" type="HBoxContainer" parent="MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/VBoxContainer/D8"]
+layout_mode = 2
+text = "D8"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D8"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="D10" type="HBoxContainer" parent="MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/VBoxContainer/D10"]
+layout_mode = 2
+text = "D10"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D10"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="D12" type="HBoxContainer" parent="MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/VBoxContainer/D12"]
+layout_mode = 2
+text = "D12"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D12"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="D20" type="HBoxContainer" parent="MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/VBoxContainer/D20"]
+layout_mode = 2
+text = "D20"
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D20"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="SpawnButton" type="Button" parent="MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+text = "Spawn"

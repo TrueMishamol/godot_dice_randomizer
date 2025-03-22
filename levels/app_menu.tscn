@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://blpm6cj062oop"]
+
+[ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/dice_randomizer_ui_theme/dice_randomizer_ui_theme.tres" id="1_dnada"]
+
+[node name="AppMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_dnada")

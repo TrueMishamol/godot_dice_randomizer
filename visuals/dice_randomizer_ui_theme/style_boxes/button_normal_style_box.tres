@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxFlat" format=3 uid="uid://cavp0c160mdas"]
+
+[resource]
+content_margin_left = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 5.0
+bg_color = Color(0.929412, 0.701961, 0.619608, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024

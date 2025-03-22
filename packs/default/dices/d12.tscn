@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6iosrclsulxh"]
+
+[ext_resource type="PackedScene" uid="uid://bay5jpitc0eel" path="res://nodes/base_dice.tscn" id="1_jbyei"]
+[ext_resource type="PackedScene" uid="uid://7ngdnmas07bl" path="res://assets/models/dices/default/d12.glb" id="2_f5afo"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_f5afo"]
+points = PackedVector3Array(1.07005, 0.69531, -0.347795, 0.661133, -4.30438e-07, -0.214974, -0.000213385, -4.30438e-07, -0.695375, 0.661133, 1.12493, -0.910355, 0.408494, 1.82025, -0.562775, 0.661133, 1.82025, 0.214765, 1.06984, 1.12493, 0.347585, 0.661133, 0.69531, 0.910145, 0.408494, -4.30438e-07, 0.562345, -0.661351, 1.12493, -0.910355, -0.000213385, 0.69531, -1.12511, -0.661351, -4.30438e-07, -0.214974, -0.40892, 1.82042, -0.562775, -0.000213385, 1.82025, 0.695165, -0.000213385, 1.12493, 1.12512, -0.40892, -4.30438e-07, 0.562345, -1.07006, 0.69531, -0.347795, -1.07006, 1.12493, 0.347585, -0.661351, 1.82025, 0.214765, -0.661351, 0.69531, 0.910145)
+
+[node name="BaseDice" instance=ExtResource("1_jbyei")]
+
+[node name="d122" parent="." index="0" instance=ExtResource("2_f5afo")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_f5afo")
