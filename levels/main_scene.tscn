@@ -1,13 +1,36 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6se7v3gn6frq"]
+[gd_scene load_steps=12 format=3 uid="uid://b6se7v3gn6frq"]
 
 [ext_resource type="PackedScene" uid="uid://blpm6cj062oop" path="res://levels/app_menu.tscn" id="1_ps8db"]
 [ext_resource type="PackedScene" uid="uid://wy1jbmevyx3c" path="res://levels/spawn_menu.tscn" id="2_1uhby"]
 [ext_resource type="Script" uid="uid://b6i4tkcaw3pj2" path="res://scripts/dice_spawner.gd" id="3_bnbiq"]
 [ext_resource type="PackedScene" uid="uid://d3e6yt4jmfna0" path="res://packs/default/levels/default_level.tscn" id="4_3xjcq"]
+[ext_resource type="Script" uid="uid://3rgdiqnm2mgn" path="res://scripts/cameras_controller.gd" id="4_rsqw6"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dd4mtjb7cl46y" path="res://visuals/environment/camera_attributes_practical.tres" id="5_3xjcq"]
 [ext_resource type="PackedScene" uid="uid://dlt3hn42qhu6v" path="res://visuals/environment/directional_light.tscn" id="6_e2jlu"]
 [ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://visuals/camera_shake/camera_shake.tscn" id="6_rsqw6"]
 [ext_resource type="PackedScene" uid="uid://bvqey5meokoef" path="res://visuals/environment/world_environment.tscn" id="7_rsqw6"]
+
+[sub_resource type="Animation" id="Animation_e2jlu"]
+resource_name = "rotation365"
+length = 40.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.133333, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oej6j"]
+_data = {
+&"rotation365": SubResource("Animation_e2jlu")
+}
 
 [node name="MainScene" type="Node"]
 
@@ -15,23 +38,46 @@
 
 [node name="AppMenu" parent="CanvasLayer" instance=ExtResource("1_ps8db")]
 
-[node name="SpawnMenu" parent="CanvasLayer" instance=ExtResource("2_1uhby")]
+[node name="SpawnMenu" parent="CanvasLayer" node_paths=PackedStringArray("_cameras_controller") instance=ExtResource("2_1uhby")]
+_spawn_point = NodePath("../../SpawnPoint")
+_cameras_controller = NodePath("../../CamerasController")
 
 [node name="DiceSpawner" type="Node" parent="."]
 script = ExtResource("3_bnbiq")
+
+[node name="CamerasController" type="Node3D" parent="." node_paths=PackedStringArray("cameras")]
+script = ExtResource("4_rsqw6")
+cameras = [NodePath("CameraRotationPoint/CameraRotation"), NodePath("CameraTop")]
+
+[node name="CameraRotationPoint" type="Node3D" parent="CamerasController"]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
+
+[node name="CameraRotation" type="Camera3D" parent="CamerasController/CameraRotationPoint"]
+transform = Transform3D(0.953201, 0.126816, -0.274455, 1.21692e-08, 0.907777, 0.419452, 0.302337, -0.399822, 0.865295, -3.76968, 6.27056, 11.145)
+attributes = ExtResource("5_3xjcq")
+current = true
+
+[node name="CameraShake" parent="CamerasController/CameraRotationPoint/CameraRotation" node_paths=PackedStringArray("camera") instance=ExtResource("6_rsqw6")]
+camera = NodePath("..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CamerasController/CameraRotationPoint"]
+libraries = {
+&"": SubResource("AnimationLibrary_oej6j")
+}
+autoplay = "rotation365"
+
+[node name="CameraTop" type="Camera3D" parent="CamerasController"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.4552, 0)
+attributes = ExtResource("5_3xjcq")
+current = true
+
+[node name="CameraShake" parent="CamerasController/CameraTop" node_paths=PackedStringArray("camera") instance=ExtResource("6_rsqw6")]
+camera = NodePath("..")
 
 [node name="DefaultLevel" parent="." instance=ExtResource("4_3xjcq")]
 
 [node name="SpawnPoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.21457, 0)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.953201, 0.126816, -0.274454, 1.21692e-08, 0.907777, 0.419452, 0.302337, -0.399822, 0.865295, -3.76968, 6.27056, 11.145)
-attributes = ExtResource("5_3xjcq")
-current = true
-
-[node name="CameraShake" parent="Camera3D" node_paths=PackedStringArray("camera") instance=ExtResource("6_rsqw6")]
-camera = NodePath("..")
 
 [node name="DirectionalLight" parent="." instance=ExtResource("6_e2jlu")]
 

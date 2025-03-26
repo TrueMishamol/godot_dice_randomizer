@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://wy1jbmevyx3c"]
+[gd_scene load_steps=3 format=3 uid="uid://wy1jbmevyx3c"]
 
 [ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/dice_randomizer_ui_theme/dice_randomizer_ui_theme.tres" id="1_g22vf"]
+[ext_resource type="Script" uid="uid://d2n446j06itxg" path="res://levels/spawn_menu.gd" id="2_tgeig"]
 
 [node name="SpawnMenu" type="Control"]
 layout_mode = 3
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_g22vf")
+script = ExtResource("2_tgeig")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -29,9 +31,9 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -190.0
-offset_top = -200.0
-offset_bottom = 200.0
+offset_left = -176.0
+offset_top = -205.0
+offset_bottom = 205.0
 grow_horizontal = 0
 grow_vertical = 2
 alignment = 1
@@ -43,9 +45,10 @@ layout_mode = 2
 layout_mode = 2
 text = "D4"
 
-[node name="SpinBox" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D4"]
+[node name="SpinBoxD4" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D4"]
 layout_mode = 2
 size_flags_horizontal = 3
+max_value = 99.0
 
 [node name="D6" type="HBoxContainer" parent="MarginContainer/Control/VBoxContainer"]
 layout_mode = 2
@@ -54,9 +57,10 @@ layout_mode = 2
 layout_mode = 2
 text = "D6"
 
-[node name="SpinBox" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D6"]
+[node name="SpinBoxD6" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D6"]
 layout_mode = 2
 size_flags_horizontal = 3
+max_value = 99.0
 
 [node name="D8" type="HBoxContainer" parent="MarginContainer/Control/VBoxContainer"]
 layout_mode = 2
@@ -65,9 +69,10 @@ layout_mode = 2
 layout_mode = 2
 text = "D8"
 
-[node name="SpinBox" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D8"]
+[node name="SpinBoxD8" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D8"]
 layout_mode = 2
 size_flags_horizontal = 3
+max_value = 99.0
 
 [node name="D10" type="HBoxContainer" parent="MarginContainer/Control/VBoxContainer"]
 layout_mode = 2
@@ -76,9 +81,10 @@ layout_mode = 2
 layout_mode = 2
 text = "D10"
 
-[node name="SpinBox" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D10"]
+[node name="SpinBoxD10" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D10"]
 layout_mode = 2
 size_flags_horizontal = 3
+max_value = 99.0
 
 [node name="D12" type="HBoxContainer" parent="MarginContainer/Control/VBoxContainer"]
 layout_mode = 2
@@ -87,9 +93,10 @@ layout_mode = 2
 layout_mode = 2
 text = "D12"
 
-[node name="SpinBox" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D12"]
+[node name="SpinBoxD12" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D12"]
 layout_mode = 2
 size_flags_horizontal = 3
+max_value = 99.0
 
 [node name="D20" type="HBoxContainer" parent="MarginContainer/Control/VBoxContainer"]
 layout_mode = 2
@@ -98,13 +105,35 @@ layout_mode = 2
 layout_mode = 2
 text = "D20"
 
-[node name="SpinBox" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D20"]
+[node name="SpinBoxD20" type="SpinBox" parent="MarginContainer/Control/VBoxContainer/D20"]
 layout_mode = 2
 size_flags_horizontal = 3
+max_value = 99.0
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/Control/VBoxContainer"]
 layout_mode = 2
 
 [node name="SpawnButton" type="Button" parent="MarginContainer/Control/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Spawn"
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/Control/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="MarginContainer/Control/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Random inertia"
+
+[node name="CheckButton2" type="CheckButton" parent="MarginContainer/Control/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Random rotation"
+
+[node name="CameraButton" type="Button" parent="MarginContainer/Control"]
+layout_mode = 1
+offset_right = 177.0
+offset_bottom = 50.0
+text = "Camera"

@@ -1,3 +1,5 @@
 [gd_scene format=3 uid="uid://bay5jpitc0eel"]
 
-[node name="BaseDice" type="RigidBody3D"]
+[node name="BaseDice" type="RigidBody3D" groups=["dices"]]
+gravity_scale = 2.495
+center_of_mass_mode = 1

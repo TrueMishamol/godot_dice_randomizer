@@ -11,28 +11,42 @@ config_version=5
 [application]
 
 config/name="Dice Randomizer"
-config/version="000.2512.0.snapshot"
+config/version="001.2513.0"
 run/main_scene="uid://b6se7v3gn6frq"
 config/features=PackedStringArray("4.4", "Mobile")
+boot_splash/bg_color=Color(0.952941, 0.607843, 0.407843, 1)
+boot_splash/image="uid://b4o5xycohg5dt"
+config/icon="uid://c7sfgi1y2l70t"
+boot_splash/minimum_display_time=1500
 
 [display]
 
 window/size/viewport_width=648
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/handheld/orientation=6
 
 [file_customization]
 
 folder_colors={
+"res://android/": "gray",
 "res://assets/": "pink",
 "res://levels/": "purple",
 "res://nodes/": "blue",
 "res://packs/": "teal",
 "res://packs/default/dices/": "blue",
 "res://packs/default/levels/": "purple",
-"res://visuals/": "orange"
+"res://scripts/": "green",
+"res://visuals/": "orange",
+"res://wip/": "gray"
 }
+
+[global_group]
+
+dices=""
 
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.952941, 0.607843, 0.407843, 1)

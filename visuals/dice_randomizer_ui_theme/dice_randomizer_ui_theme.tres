@@ -1,8 +1,10 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://dd5rl8w6bxi0p"]
+[gd_resource type="Theme" load_steps=21 format=3 uid="uid://dd5rl8w6bxi0p"]
 
 [ext_resource type="StyleBox" uid="uid://cavp0c160mdas" path="res://visuals/dice_randomizer_ui_theme/style_boxes/button_normal_style_box.tres" id="1_di37v"]
 [ext_resource type="StyleBox" uid="uid://25jmwrl552bp" path="res://visuals/dice_randomizer_ui_theme/style_boxes/button_play_style_box.tres" id="2_afj6c"]
 [ext_resource type="FontFile" uid="uid://bh0lb4bidjaa" path="res://visuals/dice_randomizer_ui_theme/MishamolPuffedBun2-Regular.otf" id="3_ia8om"]
+[ext_resource type="Texture2D" uid="uid://cjo8b61dvkqvj" path="res://assets/buttons/down.svg" id="4_ia8om"]
+[ext_resource type="Texture2D" uid="uid://b3i6foicaulym" path="res://assets/buttons/up.svg" id="5_4rd6d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ho28w"]
 
@@ -81,6 +83,44 @@ spacing_glyph = 6
 base_font = ExtResource("3_ia8om")
 variation_embolden = 0.5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ia8om"]
+content_margin_left = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 5.0
+bg_color = Color(0.929412, 0.701961, 0.619608, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4rd6d"]
+content_margin_left = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 5.0
+bg_color = Color(1, 0.789029, 0.715704, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7073"]
+content_margin_left = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 5.0
+bg_color = Color(0.929412, 0.701961, 0.619608, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cg2ri"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6qbqq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ph4w5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_04p48"]
+
 [resource]
 default_font = ExtResource("3_ia8om")
 default_font_size = 50
@@ -109,6 +149,16 @@ Label_GameVersion/colors/font_outline_color = Color(0.996078, 0.945098, 0.894118
 Label_GameVersion/constants/outline_size = 30
 Label_GameVersion/font_sizes/font_size = 90
 Label_GameVersion/fonts/font = SubResource("FontVariation_dti0c")
+LineEdit/colors/caret_color = Color(1, 1, 1, 1)
+LineEdit/colors/clear_button_color = Color(1, 1, 1, 1)
+LineEdit/colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+LineEdit/colors/font_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_selected_color = Color(1, 1, 1, 1)
+LineEdit/colors/selection_color = Color(0.986122, 0.828005, 0.742285, 1)
+LineEdit/constants/minimum_character_width = 2
+LineEdit/styles/focus = SubResource("StyleBoxFlat_ia8om")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_4rd6d")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_t7073")
 LinkButton/colors/font_color = Color(0.25098, 0.227451, 0.313726, 1)
 LinkButton/colors/font_focus_color = Color(0.25098, 0.227451, 0.313726, 1)
 LinkButton/colors/font_hover_color = Color(0.25098, 0.227451, 0.313726, 1)
@@ -118,3 +168,24 @@ MarginContainer/constants/margin_bottom = 32
 MarginContainer/constants/margin_left = 32
 MarginContainer/constants/margin_right = 32
 MarginContainer/constants/margin_top = 32
+SpinBox/colors/down_disabled_icon_modulate = Color(1, 1, 1, 0.5)
+SpinBox/colors/down_hover_icon_modulate = Color(1, 1, 1, 1)
+SpinBox/colors/down_icon_modulate = Color(1, 1, 1, 1)
+SpinBox/colors/down_pressed_icon_modulate = Color(0.980392, 0.839216, 0.792157, 1)
+SpinBox/colors/up_disabled_icon_modulate = Color(1, 1, 1, 0.5)
+SpinBox/colors/up_hover_icon_modulate = Color(1, 1, 1, 1)
+SpinBox/colors/up_icon_modulate = Color(1, 1, 1, 1)
+SpinBox/colors/up_pressed_icon_modulate = Color(0.980392, 0.839216, 0.792157, 1)
+SpinBox/constants/field_and_buttons_separation = 5
+SpinBox/icons/down = ExtResource("4_ia8om")
+SpinBox/icons/down_disabled = ExtResource("4_ia8om")
+SpinBox/icons/down_hover = ExtResource("4_ia8om")
+SpinBox/icons/down_pressed = ExtResource("4_ia8om")
+SpinBox/icons/up = ExtResource("5_4rd6d")
+SpinBox/icons/up_disabled = ExtResource("5_4rd6d")
+SpinBox/icons/up_hover = ExtResource("5_4rd6d")
+SpinBox/icons/up_pressed = ExtResource("5_4rd6d")
+SpinBox/styles/down_background_hovered = SubResource("StyleBoxEmpty_cg2ri")
+SpinBox/styles/down_background_pressed = SubResource("StyleBoxEmpty_6qbqq")
+SpinBox/styles/up_background_hovered = SubResource("StyleBoxEmpty_ph4w5")
+SpinBox/styles/up_background_pressed = SubResource("StyleBoxEmpty_04p48")

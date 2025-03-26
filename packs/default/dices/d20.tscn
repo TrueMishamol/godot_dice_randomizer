@@ -1,14 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctg1yi71khthh"]
+[gd_scene load_steps=7 format=4 uid="uid://ctg1yi71khthh"]
 
 [ext_resource type="PackedScene" uid="uid://bay5jpitc0eel" path="res://nodes/base_dice.tscn" id="1_viifr"]
-[ext_resource type="PackedScene" uid="uid://d0ow1t41wrp0f" path="res://assets/models/dices/default/d20.glb" id="2_gx7bk"]
+[ext_resource type="Texture2D" uid="uid://bxa0pitigwkxk" path="res://assets/models/default/textures/d20.png" id="2_gx7bk"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gx7bk"]
-points = PackedVector3Array(-0.868123, 0.536411, -0.000161648, -0.000169933, 0, -0.000161648, -0.268357, 0.536411, 0.825626, -0.702418, 1.40459, 0.510117, -0.702418, 1.40459, -0.510278, -0.268357, 0.536411, -0.825626, 0.702249, 0.536411, -0.510278, 0.702249, 0.536411, 0.510117, 0.268187, 1.40459, 0.825626, -0.000169933, 1.94119, -0.000161648, 0.268187, 1.40459, -0.825626, 0.867953, 1.40459, -0.000161648)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tyldy"]
+resource_name = "d20"
+cull_mode = 2
+albedo_texture = ExtResource("2_gx7bk")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3p1sd"]
+_surfaces = [{
+"aabb": AABB(-0.868123, -0.970594, -0.825626, 1.73625, 1.94119, 1.65125),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAgAEAAAAAgADAAUAAgAFAAQAAwAGAAUABAAFAAcABQAGAAcAAAAEAAgABAAHAAgAAAAJAAEAAAAIAAkAAQAKAAMACgAGAAMACQAKAAEABwAGAAsACAAHAAsACwAGAAoACAALAAkACQALAAoA"),
+"name": "d20",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("/38AAP9/AAByWMFG//8AAIznwUYazwAAjKc9uf//AACM58FG5DAAAP//Pbn/fwAA/3////9/AACMpz25AAAAAHJYwUYAAAAAAADBRv9/AAByGD25Gs8AAHIYPbnkMAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3oqaj"]
+resource_name = "d20_Icosphere"
+_surfaces = [{
+"aabb": AABB(-0.868123, -0.970594, -0.825626, 1.73625, 1.94119, 1.65125),
+"attribute_data": PackedByteArray("ZeY38f7/b+L+/////3+JmJiZwYmYmVGnmJlv4piZ////fzfxmJlv4jKzN/GYmf//mJlRp5iZ4MT/fxi2mJngxJiZb+L/f6fTZebgxGXmb+LLzKfTMrPgxMvMqNMys2/imJlRpzKzGLaYmeDEy8w38WXmb+Jl5v//MrM38cvMb+LLzP//mJmJmDKzwYkys1GnZeYYtv7/Uaf+/+DEzMyJmGXmwYll5lGnmJmo0zKz4MQys2/izMzBiczMUacys4mYZebgxP7/qNNl5m/iZebCif//iZhl5lGnMrMYtsvMUafLzODEy8wYtmXmUadl5uDE"),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGwAcAB0AHgAfACAAIQAiACMAJAAlACYAJwAoACkAKgArACwALQAuAC8AMAAxADIAMwA0ADUANgA3ADgAOQA6ADsA"),
+"material": SubResource("StandardMaterial3D_tyldy"),
+"name": "d20",
+"primitive": 3,
+"uv_scale": Vector4(2, 2, 0, 0),
+"vertex_count": 60,
+"vertex_data": PackedByteArray("/38AAP9/m8NyWMFG//+bw4znwUYaz5vDjOfBRhrPXtKM58FG5DBe0v9/AAD/f17S/38AAP9/Xd4AAMFG/39d3nJYwUb//13e/38AAP9/MulyWMFGAAAy6QAAwUb/fzLp/38AAP9/p9+M58FG5DCn33JYwUYAAKffjOfBRhrPsuv//z25/3+y64znwUbkMLLrcljBRv//0+mMpz25///T6YznwUYaz9PpAADBRv9/3ctyGD25Gs/dy3JYwUb//93LcljBRgAAi+pyGD255DCL6gAAwUb/f4vqjOfBRuQwtPGMpz25AAC08XJYwUYAALTxjOfBRhrP3cuMpz25///dy///Pbn/f93LcljBRv//KMByGD25Gs8owIynPbn//yjAAADBRv9/CtFyGD255DAK0XIYPbkazwrRcljBRgAAlvGMpz25AACW8XIYPbnkMJbxjOfBRuQwi+r//z25/3+L6oynPbkAAIvqjKc9uf///f7/f////3/9/v//Pbn/f/3+chg9uRrPm8P/f////3+bw4ynPbn//5vDchg9ueQwMMT/f////38wxHIYPbkazzDEjKc9uQAAguv/f////3+C63IYPbnkMILr//89uf9/8uf/f////3/y54ynPbkAAPLngxZC1IMWQtSDFkLUVHKrO1RyqztUcqs7eVVJaHlVSWh5VUloAkc5YAJHOWACRzlgbBt1smwbdbJsG3WyNApjPDQKYzw0CmM8bAXo7GwF6OxsBejsltpP5pbaT+aW2k/mecw20XnMNtF5zDbRymQ5IMpkOSDKZDkgaCWvGWglrxloJa8Zuvke57r5Hue6+R7nHNjFzxzYxc8c2MXP58ILwefCC8HnwgvBhTPILoUzyC6FM8gu6iZAF+omQBfqJkAXe+m8K3vpvCt76bwrK+amsyvmprMr5qaz75iBxu+YgcbvmIHGsU8xAbFPMQGxTzEB")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3p1sd")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hiaqf"]
+points = PackedVector3Array(-0.868123, -0.434183, -0.000161648, -0.000169933, -0.970594, -0.000161648, -0.268357, -0.434183, 0.825626, -0.702418, 0.433993, 0.510117, -0.702418, 0.433993, -0.510278, -0.268357, -0.434183, -0.825626, 0.702249, -0.434183, -0.510278, 0.702249, -0.434183, 0.510117, 0.268187, 0.433993, 0.825626, -0.000169933, 0.970594, -0.000161648, 0.268187, 0.433993, -0.825626, 0.867953, 0.433993, -0.000161648)
 
 [node name="BaseDice" instance=ExtResource("1_viifr")]
 
-[node name="d202" parent="." index="0" instance=ExtResource("2_gx7bk")]
+[node name="d20" type="MeshInstance3D" parent="." index="0"]
+mesh = SubResource("ArrayMesh_3oqaj")
+skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
-shape = SubResource("ConvexPolygonShape3D_gx7bk")
+shape = SubResource("ConvexPolygonShape3D_hiaqf")

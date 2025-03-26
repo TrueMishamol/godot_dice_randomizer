@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://drow28qawqxdx"
 path.s3tc="res://.godot/imported/d20_d20.png-04d8383c17e4fd6ffd04ff504c8efb2e.s3tc.ctex"
+path.etc2="res://.godot/imported/d20_d20.png-04d8383c17e4fd6ffd04ff504c8efb2e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/models/dices/default/d20_d20.png"
-dest_files=["res://.godot/imported/d20_d20.png-04d8383c17e4fd6ffd04ff504c8efb2e.s3tc.ctex"]
+dest_files=["res://.godot/imported/d20_d20.png-04d8383c17e4fd6ffd04ff504c8efb2e.s3tc.ctex", "res://.godot/imported/d20_d20.png-04d8383c17e4fd6ffd04ff504c8efb2e.etc2.ctex"]
 
 [params]
 
