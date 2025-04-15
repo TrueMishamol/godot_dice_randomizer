@@ -1,4 +1,33 @@
+## Top-most EditorConfig file
 root = true
 
 [*]
 charset = utf-8
+indent_size = 4
+indent_style = tab
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.cs]
+dotnet_diagnostic.IDE0055.severity = suggestion ## none; silent; suggestion; warning; error;
+
+csharp_style_namespace_declarations = file_scoped:suggestion
+csharp_style_expression_bodied_methods = when_on_single_line:suggestion
+csharp_style_expression_bodied_constructors = when_on_single_line:suggestion
+csharp_style_expression_bodied_operators = when_on_single_line:suggestion
+csharp_style_expression_bodied_properties = when_on_single_line:suggestion
+csharp_style_expression_bodied_indexers = when_on_single_line:suggestion
+csharp_style_expression_bodied_accessors = when_on_single_line:suggestion
+
+## New line rules
+csharp_new_line_before_open_brace = none ## none; methods; properties; control_blocks; types;
+csharp_new_line_before_else = false
+csharp_new_line_before_catch = false
+csharp_new_line_before_finally = none
+csharp_new_line_before_members_in_object_initializers = none
+csharp_new_line_before_members_in_anonymous_types = none
+csharp_new_line_between_query_expression_clauses = none
+
+[*.cpp;*.cc;*.cxx;*.C]
+cpp_new_line_before_open_brace_block = same_line
