@@ -1,13 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6se7v3gn6frq"]
+[gd_scene load_steps=11 format=3 uid="uid://b6se7v3gn6frq"]
 
-[ext_resource type="PackedScene" uid="uid://blpm6cj062oop" path="res://levels/app_menu.tscn" id="1_ps8db"]
-[ext_resource type="PackedScene" uid="uid://wy1jbmevyx3c" path="res://levels/spawn_menu.tscn" id="2_1uhby"]
-[ext_resource type="Script" uid="uid://b6i4tkcaw3pj2" path="res://scripts/dice_spawner.gd" id="3_bnbiq"]
-[ext_resource type="PackedScene" uid="uid://d3e6yt4jmfna0" path="res://packs/default/levels/default_level.tscn" id="4_3xjcq"]
+[ext_resource type="PackedScene" uid="uid://blpm6cj062oop" path="res://scenes/app_menu.tscn" id="1_ps8db"]
+[ext_resource type="PackedScene" uid="uid://wy1jbmevyx3c" path="res://scenes/spawn_menu.tscn" id="2_1uhby"]
+[ext_resource type="PackedScene" uid="uid://d3e6yt4jmfna0" path="res://datapacks/default/levels/default_level.tscn" id="4_3xjcq"]
 [ext_resource type="Script" uid="uid://3rgdiqnm2mgn" path="res://scripts/cameras_controller.gd" id="4_rsqw6"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dd4mtjb7cl46y" path="res://visuals/environment/camera_attributes_practical.tres" id="5_3xjcq"]
 [ext_resource type="PackedScene" uid="uid://dlt3hn42qhu6v" path="res://visuals/environment/directional_light.tscn" id="6_e2jlu"]
-[ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://visuals/camera_shake/camera_shake.tscn" id="6_rsqw6"]
+[ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://modules/camera_shake/camera_shake.tscn" id="6_rsqw6"]
 [ext_resource type="PackedScene" uid="uid://bvqey5meokoef" path="res://visuals/environment/world_environment.tscn" id="7_rsqw6"]
 
 [sub_resource type="Animation" id="Animation_e2jlu"]
@@ -41,9 +40,6 @@ _data = {
 [node name="SpawnMenu" parent="CanvasLayer" node_paths=PackedStringArray("_cameras_controller") instance=ExtResource("2_1uhby")]
 _spawn_point = NodePath("../../SpawnPoint")
 _cameras_controller = NodePath("../../CamerasController")
-
-[node name="DiceSpawner" type="Node" parent="."]
-script = ExtResource("3_bnbiq")
 
 [node name="CamerasController" type="Node3D" parent="." node_paths=PackedStringArray("cameras")]
 script = ExtResource("4_rsqw6")

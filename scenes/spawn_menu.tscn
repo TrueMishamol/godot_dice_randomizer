@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://wy1jbmevyx3c"]
 
 [ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/dice_randomizer_ui_theme/dice_randomizer_ui_theme.tres" id="1_g22vf"]
-[ext_resource type="Script" uid="uid://d2n446j06itxg" path="res://levels/spawn_menu.gd" id="2_tgeig"]
+[ext_resource type="Script" uid="uid://d2n446j06itxg" path="res://scenes/spawn_menu.gd" id="2_tgeig"]
 
 [node name="SpawnMenu" type="Control"]
 layout_mode = 3

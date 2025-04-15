@@ -2,12 +2,12 @@ extends Control
 
 
 
-const D4 = preload("res://packs/default/dices/d4.tscn")
-const D6 = preload("res://packs/default/dices/d6.tscn")
-const D8 = preload("res://packs/default/dices/d8.tscn")
-const D10 = preload("res://packs/default/dices/d10.tscn")
-const D12 = preload("res://packs/default/dices/d12.tscn")
-const D20 = preload("res://packs/default/dices/d20.tscn")
+const D4 = preload("res://datapacks/default/dices/d4.tscn")
+const D6 = preload("res://datapacks/default/dices/d6.tscn")
+const D8 = preload("res://datapacks/default/dices/d8.tscn")
+const D10 = preload("res://datapacks/default/dices/d10.tscn")
+const D12 = preload("res://datapacks/default/dices/d12.tscn")
+const D20 = preload("res://datapacks/default/dices/d20.tscn")
 
 @export var _spawn_point: NodePath  # Export the spawn point node path
 @export var _cameras_controller: CamerasController
@@ -36,7 +36,7 @@ func _ready() -> void:
 
 func _on_spawn_button_pressed():
 	kill_dices()
-	
+
 	var spawn_point = get_node(_spawn_point)  # Get the spawn point node
 
 	# Spawn dice based on SpinBox values
@@ -97,5 +97,5 @@ func _on_camera_button_pressed():
 	if _cameras_controller == null:
 		printerr("spawn_menu: _cameras_controller == null")
 		return
-	
+
 	_cameras_controller.switch_to_next_camera()

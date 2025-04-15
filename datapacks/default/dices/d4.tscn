@@ -1,12 +1,12 @@
 [gd_scene load_steps=7 format=4 uid="uid://bg6ggr1cie2n2"]
 
-[ext_resource type="PackedScene" uid="uid://bay5jpitc0eel" path="res://nodes/base_dice.tscn" id="1_grtpk"]
-[ext_resource type="Texture2D" uid="uid://c82d0o8hjn8e8" path="res://assets/models/default/textures/d4.png" id="2_ewufo"]
+[ext_resource type="PackedScene" uid="uid://bay5jpitc0eel" path="res://nodes/base_dice.tscn" id="1_36su8"]
+[ext_resource type="Texture2D" uid="uid://c82d0o8hjn8e8" path="res://assets/models/default/textures/d4.png" id="2_t31ev"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twktt"]
 resource_name = "d4"
 cull_mode = 2
-albedo_texture = ExtResource("2_ewufo")
+albedo_texture = ExtResource("2_t31ev")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_fqpex"]
@@ -44,7 +44,7 @@ shadow_mesh = SubResource("ArrayMesh_fqpex")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wa7kq"]
 points = PackedVector3Array(-0.816497, -0.333333, -0.471405, -0.00015986, 1, -4.61638e-05, 0.816497, -0.333333, -0.471405, -0.00015986, -0.333333, 0.942809)
 
-[node name="BaseDice" instance=ExtResource("1_grtpk")]
+[node name="BaseDice" instance=ExtResource("1_36su8")]
 
 [node name="d4" type="MeshInstance3D" parent="." index="0"]
 mesh = SubResource("ArrayMesh_7xrl8")

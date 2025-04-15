@@ -3,13 +3,10 @@
 		"ms-dotnettools.vscode-dotnet-runtime",
 		"aaron-bond.better-comments",
 		"ms-dotnettools.csharp",
-		"ms-dotnettools.csdevkit",
 		"neikeq.godot-csharp-vscode",
 		"editorconfig.editorconfig",
 		"jamessauer.gdscript-theme",
-		"altamkp.godot-snippets-vscode-csharp",
 		"geequlim.godot-tools",
-		"ms-dotnettools.vscodeintellicode-csharp",
 		"pkief.material-icon-theme",
 		"ms-vscode.mono-debug"
 	]

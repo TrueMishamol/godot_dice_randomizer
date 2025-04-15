@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dcq12j2bl3dsc"]
 
-[ext_resource type="Script" path="res://visuals/camera_shake/camera_shake.gd" id="1_swglb"]
+[ext_resource type="Script" uid="uid://dqcmj3hot6q3u" path="res://modules/camera_shake/camera_shake.gd" id="1_swglb"]
 
 [node name="CameraShake" type="Node"]
 process_mode = 3

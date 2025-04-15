@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnvtqnh3p775h"
-path.s3tc="res://.godot/imported/d10_d10.png-7f18d05f76a1f2540a96ab7010ef45dc.s3tc.ctex"
-path.etc2="res://.godot/imported/d10_d10.png-7f18d05f76a1f2540a96ab7010ef45dc.etc2.ctex"
+path.s3tc="res://.godot/imported/d10_d10.png-87fbad37a8a7b87d498616048b3b3dc1.s3tc.ctex"
+path.etc2="res://.godot/imported/d10_d10.png-87fbad37a8a7b87d498616048b3b3dc1.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://packs/default/dices/assets/d10_d10.png"
-dest_files=["res://.godot/imported/d10_d10.png-7f18d05f76a1f2540a96ab7010ef45dc.s3tc.ctex", "res://.godot/imported/d10_d10.png-7f18d05f76a1f2540a96ab7010ef45dc.etc2.ctex"]
+source_file="res://datapacks/default/dices/assets/d10_d10.png"
+dest_files=["res://.godot/imported/d10_d10.png-87fbad37a8a7b87d498616048b3b3dc1.s3tc.ctex", "res://.godot/imported/d10_d10.png-87fbad37a8a7b87d498616048b3b3dc1.etc2.ctex"]
 
 [params]
 
