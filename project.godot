@@ -10,14 +10,18 @@ config_version=5
 
 [application]
 
-config/name="Dice Randomizer"
+config/name="3D Dice Randomizer"
+config/description="3D Dice Randomizer
+by Mishamol"
 config/version="001.2513.0"
 config/tags=PackedStringArray("gdscript", "google_play")
 run/main_scene="uid://b6se7v3gn6frq"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="cool_cyan_donut/dice_randomizer"
 config/features=PackedStringArray("4.4", "Mobile")
 boot_splash/bg_color=Color(0.952941, 0.607843, 0.407843, 1)
 boot_splash/image="uid://b4o5xycohg5dt"
-config/icon="uid://c7sfgi1y2l70t"
+config/icon="uid://bnjv3ytd7hy6e"
 boot_splash/minimum_display_time=1500
 
 [display]
@@ -29,7 +33,7 @@ window/handheld/orientation=6
 
 [dotnet]
 
-project/assembly_name="Dice Randomizer"
+project/assembly_name="DiceRandomizer"
 
 [file_customization]
 
