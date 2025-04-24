@@ -2,21 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcfbjb1xtny2m"
-path.s3tc="res://.godot/imported/d12_d12.png-6a4b6248aaae1ddae24bb8aa665b301b.s3tc.ctex"
-path.etc2="res://.godot/imported/d12_d12.png-6a4b6248aaae1ddae24bb8aa665b301b.etc2.ctex"
+uid="uid://cq2aq6ispdqfv"
+path.s3tc="res://.godot/imported/d12.png-7ce17f54e2b39f8569f48af5cc2a9494.s3tc.ctex"
+path.etc2="res://.godot/imported/d12.png-7ce17f54e2b39f8569f48af5cc2a9494.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "dd6a5a606c0cc5d09a754e14522e34a9"
-}
 
 [deps]
 
-source_file="res://assets/models/dices/default/d12_d12.png"
-dest_files=["res://.godot/imported/d12_d12.png-6a4b6248aaae1ddae24bb8aa665b301b.s3tc.ctex", "res://.godot/imported/d12_d12.png-6a4b6248aaae1ddae24bb8aa665b301b.etc2.ctex"]
+source_file="res://assets/models/blender/textures/d12.png"
+dest_files=["res://.godot/imported/d12.png-7ce17f54e2b39f8569f48af5cc2a9494.s3tc.ctex", "res://.godot/imported/d12.png-7ce17f54e2b39f8569f48af5cc2a9494.etc2.ctex"]
 
 [params]
 

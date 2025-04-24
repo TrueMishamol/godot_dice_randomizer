@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c82d0o8hjn8e8"
-path.s3tc="res://.godot/imported/d4.png-d6b6cdfe3ea0c6c7ca8fcda4f75c23ee.s3tc.ctex"
-path.etc2="res://.godot/imported/d4.png-d6b6cdfe3ea0c6c7ca8fcda4f75c23ee.etc2.ctex"
+uid="uid://djiduo0hpw5gp"
+path.s3tc="res://.godot/imported/d4.png-228b65880fcb8f498e5abe44eb92e60e.s3tc.ctex"
+path.etc2="res://.godot/imported/d4.png-228b65880fcb8f498e5abe44eb92e60e.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/default/textures/d4.png"
-dest_files=["res://.godot/imported/d4.png-d6b6cdfe3ea0c6c7ca8fcda4f75c23ee.s3tc.ctex", "res://.godot/imported/d4.png-d6b6cdfe3ea0c6c7ca8fcda4f75c23ee.etc2.ctex"]
+source_file="res://assets/models/blender/textures/d4.png"
+dest_files=["res://.godot/imported/d4.png-228b65880fcb8f498e5abe44eb92e60e.s3tc.ctex", "res://.godot/imported/d4.png-228b65880fcb8f498e5abe44eb92e60e.etc2.ctex"]
 
 [params]
 

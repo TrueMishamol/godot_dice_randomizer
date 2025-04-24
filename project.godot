@@ -42,8 +42,6 @@ folder_colors={
 "res://android/": "gray",
 "res://assets/": "pink",
 "res://datapacks/": "pink",
-"res://datapacks/default/dices/": "blue",
-"res://datapacks/default/levels/": "purple",
 "res://modules/": "purple",
 "res://nodes/": "blue",
 "res://resources/": "teal",
