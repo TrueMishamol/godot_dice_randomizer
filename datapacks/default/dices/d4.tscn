@@ -1,54 +1,15 @@
-[gd_scene load_steps=7 format=4 uid="uid://bg6ggr1cie2n2"]
+[gd_scene load_steps=4 format=3 uid="uid://bg6ggr1cie2n2"]
 
 [ext_resource type="PackedScene" uid="uid://bay5jpitc0eel" path="res://nodes/base_dice.tscn" id="1_36su8"]
-[ext_resource type="Texture2D" uid="uid://c82d0o8hjn8e8" path="res://assets/models/default/textures/d4.png" id="2_t31ev"]
+[ext_resource type="ArrayMesh" uid="uid://nv2h8o5mb0tf" path="res://datapacks/default/assets/meshes/dices_d4.res" id="2_36su8"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twktt"]
-resource_name = "d4"
-cull_mode = 2
-albedo_texture = ExtResource("2_t31ev")
-roughness = 0.5
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_fqpex"]
-_surfaces = [{
-"aabb": AABB(-0.816497, -0.333333, -0.471405, 1.63299, 1.33333, 1.41421),
-"format": 34896613377,
-"index_count": 12,
-"index_data": PackedByteArray("AAABAAIAAgABAAMAAAADAAEAAAACAAMA"),
-"name": "d4",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray("/3///1VVAAD//wAAAAAAAP9/AAD//wAAAAAAAAAAAAA=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_7xrl8"]
-resource_name = "d4_GD_mesh"
-_surfaces = [{
-"aabb": AABB(-0.816497, -0.333333, -0.471405, 1.63299, 1.33333, 1.41421),
-"attribute_data": PackedByteArray("mmuP+28E/7+aa26EpNuP+3h0/7+k226EmmuQe28E/z+aa28EpNuQe3h0/z+k228E"),
-"format": 34896613399,
-"index_count": 12,
-"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsA"),
-"material": SubResource("StandardMaterial3D_twktt"),
-"name": "d4",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("/3///1VVnPT//wAAAACc9P9/AAD//5z0/3///1VVoPIAAAAAAACg8v//AAAAAKDy/3///1VV8ub/fwAA///y5gAAAAAAAPLm/38AAP////D//wAAAAD/8AAAAAAAAP/wKRYZJCkWGSQpFhkkauEZmmrhGZpq4RmaqP5xMaj+cTGo/nExcDjf8HA43/BwON/w")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_fqpex")
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wa7kq"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_t31ev"]
 points = PackedVector3Array(-0.816497, -0.333333, -0.471405, -0.00015986, 1, -4.61638e-05, 0.816497, -0.333333, -0.471405, -0.00015986, -0.333333, 0.942809)
 
 [node name="BaseDice" instance=ExtResource("1_36su8")]
 
-[node name="d4" type="MeshInstance3D" parent="." index="0"]
-mesh = SubResource("ArrayMesh_7xrl8")
-skeleton = NodePath("")
+[node name="DicesD4" type="MeshInstance3D" parent="." index="0"]
+mesh = ExtResource("2_36su8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
-shape = SubResource("ConvexPolygonShape3D_wa7kq")
+shape = SubResource("ConvexPolygonShape3D_t31ev")

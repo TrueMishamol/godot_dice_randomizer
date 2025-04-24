@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://blpm6cj062oop" path="res://scenes/app_menu.tscn" id="1_ps8db"]
 [ext_resource type="PackedScene" uid="uid://wy1jbmevyx3c" path="res://scenes/spawn_menu.tscn" id="2_1uhby"]
 [ext_resource type="Script" uid="uid://bwbujhjdudkxa" path="res://scripts/CamerasController.cs" id="3_18nlu"]
-[ext_resource type="PackedScene" uid="uid://d3e6yt4jmfna0" path="res://datapacks/default/levels/default_level.tscn" id="4_3xjcq"]
+[ext_resource type="PackedScene" uid="uid://c844sodtmbvjs" path="res://datapacks/default/levels/level.tscn" id="4_3xjcq"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dd4mtjb7cl46y" path="res://visuals/environment/camera_attributes_practical.tres" id="5_3xjcq"]
 [ext_resource type="PackedScene" uid="uid://dlt3hn42qhu6v" path="res://visuals/environment/directional_light.tscn" id="6_e2jlu"]
 [ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://modules/camera_shake/camera_shake.tscn" id="6_rsqw6"]

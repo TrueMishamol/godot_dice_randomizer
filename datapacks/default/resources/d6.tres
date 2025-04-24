@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DiceResource" load_steps=3 format=3 uid="uid://wuicqx6i5tdy"]
+
+[ext_resource type="Script" uid="uid://2i1da7y25i5a" path="res://resources/DiceResource.cs" id="1_686mm"]
+[ext_resource type="PackedScene" uid="uid://chvfwosixnpjs" path="res://datapacks/default/dices/d6.tscn" id="1_d4oss"]
+
+[resource]
+script = ExtResource("1_686mm")
+_Name = "D6"
+_Scene = ExtResource("1_d4oss")
+metadata/_custom_type_script = "uid://2i1da7y25i5a"

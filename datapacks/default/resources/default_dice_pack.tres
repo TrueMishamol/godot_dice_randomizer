@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="DicePackResource" load_steps=8 format=3 uid="uid://dntg066ymtn4s"]
+
+[ext_resource type="Resource" uid="uid://dbyrej2kv2es4" path="res://datapacks/default/resources/d4.tres" id="1_h4qmq"]
+[ext_resource type="Resource" uid="uid://wuicqx6i5tdy" path="res://datapacks/default/resources/d6.tres" id="2_u5isf"]
+[ext_resource type="Resource" uid="uid://nhvr5yww77n1" path="res://datapacks/default/resources/d8.tres" id="3_3c1mi"]
+[ext_resource type="Resource" uid="uid://bp8a0gpaj5tqw" path="res://datapacks/default/resources/d10.tres" id="4_mmo55"]
+[ext_resource type="Resource" uid="uid://bqg8s1yqtwhc4" path="res://datapacks/default/resources/d12.tres" id="5_iu1iv"]
+[ext_resource type="Resource" uid="uid://b1agqxtyap2mu" path="res://datapacks/default/resources/d20.tres" id="6_n8vo6"]
+[ext_resource type="Script" uid="uid://4m81j5grow1p" path="res://resources/DicePackResource.cs" id="7_0d4q3"]
+
+[resource]
+script = ExtResource("7_0d4q3")
+_Name = "Default Dice Pack"
+_DiceResources = [ExtResource("1_h4qmq"), ExtResource("2_u5isf"), ExtResource("3_3c1mi"), ExtResource("4_mmo55"), ExtResource("5_iu1iv"), ExtResource("6_n8vo6")]
+metadata/_custom_type_script = "uid://4m81j5grow1p"

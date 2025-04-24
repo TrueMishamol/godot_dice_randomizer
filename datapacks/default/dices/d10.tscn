@@ -1,54 +1,15 @@
-[gd_scene load_steps=7 format=4 uid="uid://d13w53dwsd1mh"]
+[gd_scene load_steps=4 format=3 uid="uid://d13w53dwsd1mh"]
 
 [ext_resource type="PackedScene" uid="uid://bay5jpitc0eel" path="res://nodes/base_dice.tscn" id="1_ahlg8"]
-[ext_resource type="Texture2D" uid="uid://cgb38400abn7r" path="res://assets/models/default/textures/d10.png" id="2_kfet6"]
+[ext_resource type="ArrayMesh" uid="uid://corkhknfedx50" path="res://datapacks/default/assets/meshes/dices_d10.res" id="2_55ckb"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gljk2"]
-resource_name = "d10"
-cull_mode = 2
-albedo_texture = ExtResource("2_kfet6")
-roughness = 0.5
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_1tljk"]
-_surfaces = [{
-"aabb": AABB(-0.918265, -0.959822, -0.959781, 1.8318, 1.92607, 1.92607),
-"format": 34896613377,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAACAAMAAQADAAIAAAAEAAEABQABAAQAAAAFAAQAAQAGAAMABQAGAAEAAAADAAcAAAAIAAUACQADAAYACQAHAAMABQAKAAYACQAGAAoABQAIAAoABwAJAAsABwALAAAACQAKAAsACwAIAAAACwAKAAgA"),
-"name": "d10",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("/3////9/AADkMJ1vjOcAAAAAYZCNpwAAAACdb3FYAAD/f2GQ//8AABrPnW+M5wAA/38AAP9/AADkMGGQchgAAP//YZCNpwAA/3+dbwAAAAD//51vcVgAABrPYZByGAAA")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_wu68s"]
-resource_name = "d10_Cylinder_001"
-_surfaces = [{
-"aabb": AABB(-0.918265, -0.959822, -0.959781, 1.8318, 1.92607, 1.92607),
-"attribute_data": PackedByteArray("/9/s1kr0////3zX///9l7/+/7Nazq9mt/7+jrv+fc77/vzX//59l7/+/7Nazq////79zvv/fo67/3+zWs8vZrf9/huf/n7bX/5///7OL7Nb/fxCt/59AnUuU2a3/f8eE/59Anf+/EK2zq9mt/7/HhP+/Nf//32XvStT///+/7Nb/nyLW/39Sxv+f2a2zi+zW/7/HhErU2a3/vxCt/99AnQ=="),
-"format": 34896613399,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_gljk2"),
-"name": "d10",
-"primitive": 3,
-"uv_scale": Vector4(2, 2, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("/3////9/lK7kMJ1vjOeUrgAAYZCNp42u/39hkP//m67/f////38S3gAAnW9xWBLe5DBhkHIYGN4AAGGQjacL3uQwYZByGGv5Gs9hkHIYa/n/f////39q+f9/nW8AAG75Gs9hkHIYWPP//2GQjadY8/9/////f1rz//+db3FYUvP/f51vAAAp4gAAnW9xWCni/38AAP9/KOLkMGGQchgr4uQwnW+M53T9AACdb3FYdP0AAGGQjads/f9/AAD/f3f9Gs+db4znje7kMJ1vjOeN7v9/YZD//5bu/38AAP9/ie7/f51vAAD53v//nW9xWPneGs9hkHIY+97/fwAA/3/43hrPnW+M53T9//+db3FYdP3/fwAA/393/f//YZCNp2z9/3////9/baYaz51vjOdtpv9/YZD//2qm//9hkI2nb6YwpEixMKRIsTykSbElpEix5PwWTuT8Fk7Z/AtO7/wgToSSXM+EklzPh5Jaz3uSY8//tNSc/7TUnPy01pwEtc6cMkwE5DJMBOQwTADkNkwM5LlbyWC5W8lgtVvNYLpbx2BHeOleR3jpXkt46F5FeOpePQrBXz0KwV8zCsZfQgq/XzYfuNs2H7jbOB+62zIftNuvyENar8hDWrTIM1qqyFNa")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_1tljk")
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8orvm"]
-points = PackedVector3Array(-0.00254363, 0.126326, 0.966289, 0.913357, 0.126326, 0.300762, -0.00254363, 0.966248, 0.00306565, -0.918265, 0.126326, 0.300762, -0.568437, -0.120088, 0.782279, 0.563529, -0.120088, 0.782279, 0.913357, -0.120088, -0.294442, 0.563529, 0.126326, -0.775959, -0.568437, 0.126326, -0.775959, -0.918265, -0.120088, -0.294442, -0.00254363, -0.959822, 0.00306565, -0.00254363, -0.120088, -0.959781)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l1bvq"]
+points = PackedVector3Array(-0.00254363, 0.126326, 0.966289, 0.913357, 0.126326, 0.300762, -0.00254363, 0.966248, 0.00325418, -0.918265, 0.126326, 0.300762, -0.568437, -0.120088, 0.782279, 0.563529, -0.120088, 0.782279, 0.913357, -0.120088, -0.294442, 0.563529, 0.126326, -0.775959, -0.568437, 0.126326, -0.775959, -0.918265, -0.120088, -0.294442, -0.00254363, -0.959822, 0.00325418, -0.00254363, -0.120088, -0.959781)
 
 [node name="BaseDice" instance=ExtResource("1_ahlg8")]
 
-[node name="d10" type="MeshInstance3D" parent="." index="0"]
-mesh = SubResource("ArrayMesh_wu68s")
-skeleton = NodePath("")
+[node name="DicesD10" type="MeshInstance3D" parent="." index="0"]
+mesh = ExtResource("2_55ckb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
-shape = SubResource("ConvexPolygonShape3D_8orvm")
+shape = SubResource("ConvexPolygonShape3D_l1bvq")
