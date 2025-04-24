@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://blpm6cj062oop" path="res://scenes/app_menu.tscn" id="1_ps8db"]
 [ext_resource type="PackedScene" uid="uid://wy1jbmevyx3c" path="res://scenes/spawn_menu.tscn" id="2_1uhby"]
+[ext_resource type="Script" uid="uid://bwbujhjdudkxa" path="res://scripts/CamerasController.cs" id="3_18nlu"]
 [ext_resource type="PackedScene" uid="uid://d3e6yt4jmfna0" path="res://datapacks/default/levels/default_level.tscn" id="4_3xjcq"]
-[ext_resource type="Script" uid="uid://3rgdiqnm2mgn" path="res://scripts/cameras_controller.gd" id="4_rsqw6"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dd4mtjb7cl46y" path="res://visuals/environment/camera_attributes_practical.tres" id="5_3xjcq"]
 [ext_resource type="PackedScene" uid="uid://dlt3hn42qhu6v" path="res://visuals/environment/directional_light.tscn" id="6_e2jlu"]
 [ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://modules/camera_shake/camera_shake.tscn" id="6_rsqw6"]
@@ -37,13 +37,13 @@ _data = {
 
 [node name="AppMenu" parent="CanvasLayer" instance=ExtResource("1_ps8db")]
 
-[node name="SpawnMenu" parent="CanvasLayer" node_paths=PackedStringArray("_cameras_controller") instance=ExtResource("2_1uhby")]
-_spawn_point = NodePath("../../SpawnPoint")
-_cameras_controller = NodePath("../../CamerasController")
+[node name="SpawnMenu" parent="CanvasLayer" node_paths=PackedStringArray("_CamerasController") instance=ExtResource("2_1uhby")]
+_SpawnPoint = NodePath("../../SpawnPoint")
+_CamerasController = NodePath("../../CamerasController")
 
-[node name="CamerasController" type="Node3D" parent="." node_paths=PackedStringArray("cameras")]
-script = ExtResource("4_rsqw6")
-cameras = [NodePath("CameraRotationPoint/CameraRotation"), NodePath("CameraTop")]
+[node name="CamerasController" type="Node3D" parent="." node_paths=PackedStringArray("_Cameras")]
+script = ExtResource("3_18nlu")
+_Cameras = [NodePath("CameraRotationPoint/CameraRotation"), NodePath("CameraTop")]
 
 [node name="CameraRotationPoint" type="Node3D" parent="CamerasController"]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
@@ -53,8 +53,7 @@ transform = Transform3D(0.953201, 0.126816, -0.274455, 1.21692e-08, 0.907777, 0.
 attributes = ExtResource("5_3xjcq")
 current = true
 
-[node name="CameraShake" parent="CamerasController/CameraRotationPoint/CameraRotation" node_paths=PackedStringArray("camera") instance=ExtResource("6_rsqw6")]
-camera = NodePath("..")
+[node name="CameraShake" parent="CamerasController/CameraRotationPoint/CameraRotation" instance=ExtResource("6_rsqw6")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CamerasController/CameraRotationPoint"]
 libraries = {
@@ -67,8 +66,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.
 attributes = ExtResource("5_3xjcq")
 current = true
 
-[node name="CameraShake" parent="CamerasController/CameraTop" node_paths=PackedStringArray("camera") instance=ExtResource("6_rsqw6")]
-camera = NodePath("..")
+[node name="CameraShake" parent="CamerasController/CameraTop" instance=ExtResource("6_rsqw6")]
 
 [node name="DefaultLevel" parent="." instance=ExtResource("4_3xjcq")]
 

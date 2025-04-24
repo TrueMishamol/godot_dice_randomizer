@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://wy1jbmevyx3c"]
 
 [ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/dice_randomizer_ui_theme/dice_randomizer_ui_theme.tres" id="1_g22vf"]
-[ext_resource type="Script" uid="uid://d2n446j06itxg" path="res://scenes/spawn_menu.gd" id="2_tgeig"]
+[ext_resource type="Script" uid="uid://brp0pq1hsed6q" path="res://scenes/SpawnMenu.cs" id="2_auwpv"]
 
 [node name="SpawnMenu" type="Control"]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_g22vf")
-script = ExtResource("2_tgeig")
+script = ExtResource("2_auwpv")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
