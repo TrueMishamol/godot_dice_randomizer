@@ -81,5 +81,16 @@
 			"bold": false,
 			"italic": false
 		}
-	]
+	],
+	"multiCommand.commands": [
+		{
+			"command": "multiCommand.formatAndOrganize",
+			"sequence": [
+				"editor.action.formatDocument",
+				"csharpOrganizeUsings.organize"
+			]
+		}
+	],
+	"csharpOrganizeUsings.splitGroups": false,
+	"csharpOrganizeUsings.sortOrder": ""
 }
